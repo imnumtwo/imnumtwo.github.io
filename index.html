@@ -44,12 +44,12 @@ function myFunction() {
     if(mfoursneeded < 0){
 	mfoursneeded = 0;    
     }
-    var foursneeded = fivesneeded * 5;
+    var foursneeded = fivesneeded * 4;
     var mthreesneeded = foursneeded - mthrees - nmfours;  
     if(mthreesneeded < 0){
 	    mthreesneeded = 0;
     }
-    var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees;
+    var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees + (mthrees * 3);
     if(mtwosneeded < 0){
 	    mtwosneeded = 0;
     }
