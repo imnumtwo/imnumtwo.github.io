@@ -55,8 +55,8 @@ function myFunction() {
     var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees;
     coins = coins + mtwosneeded * 20;
 	
-    if(mthreesneeded < 0){
-	    mthreesneeded = 0;
+    if(mtwosneeded < 0){
+	    mtwosneeded = 0;
     }
     document.getElementById("nmaxfours").innerHTML = "<b><i>maxed g4s needed:</b></i> " + mfoursneeded;
     document.getElementById("nmaxthrees").innerHTML = "<b><i>maxed g3s needed:</b></i> " + mthreesneeded;
