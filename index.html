@@ -9,7 +9,7 @@
 <body>
 	<div>
 		
-	<p id="insert"></p>
+	<p id="demo"></p>
 		
 	<form name="calc" method="post" action="calc.php">
     	
@@ -39,7 +39,10 @@
 	
 <script>
 	
-document.getElementById("insert").innerHTML = "write me to the screen";
+function myFunction() {
+    var v = document.getElementById("mtwos").value;
+    document.getElementById("demo").innerHTML = v;
+}
 
 </script>
 	
