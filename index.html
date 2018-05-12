@@ -19,6 +19,10 @@
 	<input type="text" id="mtwos" name="mtwos" placeholder="# of maxed g2s"><br>	
 	<button type="button" onclick="myFunction()">gogo</button>
 		
+	<p id="fourerror"></p>
+	<p id="threeerror"></p>
+	<p id="twoerror"></p>	
+		
 	<p id="nmaxfours"></p>
 	<p id="nmaxthrees"></p>
 	<p id="nmaxtwos"></p>
@@ -57,6 +61,18 @@ function myFunction() {
     var coins = 2950 - (fives * 590) - (tfours * 110) - (tthrees * 20);
     if(coins < 0){
 	    coins = 0;
+    }
+    if(mfours > 5){
+	 document.getElementById("fourerror").innerHTML = "<font size="3" color="red">u got some excess max g4s bruh</font>
+";
+    }
+    if(mthrees > 20){
+	 document.getElementById("threeerror").innerHTML = "<font size="3" color="red">u got some excess max g3s bruh</font>
+";
+    }
+    if(mtwos > 60){
+	 document.getElementById("twoerror").innerHTML = "<font size="3" color="red">u got some excess max g2s bruh</font>
+";
     }
     document.getElementById("nmaxfours").innerHTML = "<b><i>maxed g4s needed:</b></i> " + mfoursneeded;
     document.getElementById("nmaxthrees").innerHTML = "<b><i>maxed g3s needed:</b></i> " + mthreesneeded;
