@@ -9,7 +9,6 @@
 <body>
 	<div>
 		
-	<p id="demo"></p>
 		
 	<form name="calc" method="post" action="calc.php">
     	
@@ -32,6 +31,11 @@
 	<input type="text" id="mtwos" name="mtwos"><br>
 		
 	<button type="button" onclick="myFunction()">Try it</button>
+		
+	<p id="nmaxfours"></p><br>
+	<p id="nmaxthrees"></p><br>
+	<p id="nmaxtwos"></p><br>
+	<p id="coins"></p><br>
 
 	</form>
     </div>
@@ -40,8 +44,40 @@
 <script>
 	
 function myFunction() {
-    var v = document.getElementById("mtwos").value;
-    document.getElementById("demo").innerHTML = v;
+    var fives = document.getElementById("fives").value;
+    var mfours = document.getElementById("mfours").value;
+    var nmfours = document.getElementById("nmfours").value;
+    var mthrees = document.getElementById("mthrees").value;
+    var nmthrees = document.getElementById("nmthrees").value;
+    var mtwos = document.getElementById("mtwos").value;
+	
+    var fivesneeded = 5 - fives;
+    var mfoursneeded = fiveneeded - mfours;
+    var coins = coins + maxedfoursneeded * 40;
+	
+    if(mfoursneeded < 0){
+	mfoursneeded = 0;    
+    }
+
+    var foursneeded = fivesneeded * 4;
+    var mthreesneeded = foursneeded - mythrees - nmfours;
+    var coins = coins + mthreesneeded * 30;
+    
+    if(mthreesneeded < 0){
+	    mthreesneeded = 0;
+    }
+	
+    var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees;
+    var coins = coins + mtwosneeded * 20;
+	
+    if(mthreesneeded < 0){
+	    mthreesneeded = 0;
+    }
+
+    document.getElementById("nmaxfours").innerHTML = "g4s needed: " + mfoursneeded;
+    document.getElementById("nmaxthrees").innerHTML = "g3s needed: " + mthreesneeded;
+    document.getElementById("nmaxtwos").innerHTML = "g2s needed: " + mtwosneeded;
+    document.getElementById("coins").innerHTML = "gold: " + coins + ",000";
 }
 
 </script>
