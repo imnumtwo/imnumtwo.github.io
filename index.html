@@ -36,24 +36,27 @@ function myFunction() {
     var mthrees = document.getElementById("mthrees").value;
     var nmthrees = document.getElementById("nmthrees").value;
     var mtwos = document.getElementById("mtwos").value;
-	
+    var tfours = mfours + nmfours;
+    var tthrees = mthrees + nmthrees;
+    
     var fivesneeded = 5 - fives;
     var mfoursneeded = fivesneeded - mfours;	
     if(mfoursneeded < 0){
 	mfoursneeded = 0;    
     }
-    var coins = fivesneeded * 40;
     var foursneeded = fivesneeded * 4;
     var mthreesneeded = foursneeded - mthrees - nmfours;  
     if(mthreesneeded < 0){
 	    mthreesneeded = 0;
     }
-    coins = coins + mthreesneeded * 30;	
     var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees;
     if(mtwosneeded < 0){
 	    mtwosneeded = 0;
     }
-    coins = coins + mtwosneeded * 20;
+    var coins = 2950000 - (fives * 590000) - (tfours * 110000) - (tthrees * 20000);
+    if(coins < 0){
+	    coins = 0;
+    }
     document.getElementById("nmaxfours").innerHTML = "<b><i>maxed g4s needed:</b></i> " + mfoursneeded;
     document.getElementById("nmaxthrees").innerHTML = "<b><i>maxed g3s needed:</b></i> " + mthreesneeded;
     document.getElementById("nmaxtwos").innerHTML = "<b><i>maxed g2s needed: </b></i>" + mtwosneeded;
