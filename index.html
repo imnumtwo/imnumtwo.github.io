@@ -10,12 +10,12 @@
 <body>
 	<div>
 
-        <input type="text" id="fives" name="fives" placeholder="current # of g5s"><br>		
-	<input type="text" id="mfours" name="mfours" placeholder="current # of maxed g4s"><br>	
-        <input type="text" id="nmfours" name="nmfours" placeholder="current # of nonmaxed g4s"><br>	
-	<input type="text" id="mthrees" name="mthrees" placeholder="current # of maxed g3s"><br>
-        <input type="text" id="nmthrees" name="nmthrees" placeholder="current # of nonmaxed g3s"><br>	
-	<input type="text" id="mtwos" name="mtwos" placeholder="current # of maxed g2s"><br>	
+        <input type="text" id="fives" name="fives" placeholder="# of g5s"><br>		
+	<input type="text" id="mfours" name="mfours" placeholder="# of maxed g4s"><br>	
+        <input type="text" id="nmfours" name="nmfours" placeholder="# of nonmaxed g4s"><br>	
+	<input type="text" id="mthrees" name="mthrees" placeholder="# of maxed g3s"><br>
+        <input type="text" id="nmthrees" name="nmthrees" placeholder="# of nonmaxed g3s"><br>	
+	<input type="text" id="mtwos" name="mtwos" placeholder="# of maxed g2s"><br>	
 	<button type="button" onclick="myFunction()">gogo</button>
 		
 	<p id="nmaxfours"></p>
@@ -38,26 +38,22 @@ function myFunction() {
     var mtwos = document.getElementById("mtwos").value;
 	
     var fivesneeded = 5 - fives;
-    var mfoursneeded = fivesneeded - mfours;
-    var coins = mfoursneeded * 40;
-	
+    var mfoursneeded = fivesneeded - mfours;	
     if(mfoursneeded < 0){
 	mfoursneeded = 0;    
     }
+    var coins = mfoursneeded * 40;
     var foursneeded = fivesneeded * 4;
-    var mthreesneeded = foursneeded - mthrees - nmfours;
-    coins = coins + mthreesneeded * 30;
-    
+    var mthreesneeded = foursneeded - mthrees - nmfours;  
     if(mthreesneeded < 0){
 	    mthreesneeded = 0;
     }
-	
+    coins = coins + mthreesneeded * 30;	
     var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees;
-    coins = coins + mtwosneeded * 20;
-	
     if(mtwosneeded < 0){
 	    mtwosneeded = 0;
     }
+    coins = coins + mtwosneeded * 20;
     document.getElementById("nmaxfours").innerHTML = "<b><i>maxed g4s needed:</b></i> " + mfoursneeded;
     document.getElementById("nmaxthrees").innerHTML = "<b><i>maxed g3s needed:</b></i> " + mthreesneeded;
     document.getElementById("nmaxtwos").innerHTML = "<b><i>maxed g2s needed: </b></i>" + mtwosneeded;
