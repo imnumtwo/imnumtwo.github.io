@@ -49,28 +49,7 @@ function myFunction() {
     var nmthrees = document.getElementById("nmthrees").value;
     var mtwos = document.getElementById("mtwos").value;
 	
-    var fivesneeded = 5 - fives;
-    var mfoursneeded = fiveneeded - mfours;
-    var coins = coins + maxedfoursneeded * 40;
-	
-    if(mfoursneeded < 0){
-	mfoursneeded = 0;    
-    }
-
-    var foursneeded = fivesneeded * 4;
-    var mthreesneeded = foursneeded - mythrees - nmfours;
-    var coins = coins + mthreesneeded * 30;
     
-    if(mthreesneeded < 0){
-	    mthreesneeded = 0;
-    }
-	
-    var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees;
-    var coins = coins + mtwosneeded * 20;
-	
-    if(mthreesneeded < 0){
-	    mthreesneeded = 0;
-    }
 
     document.getElementById("nmaxfours").innerHTML = "hey";
 }
