@@ -64,12 +64,18 @@ function myFunction() {
     }
     if(mfours > 5){
 	 document.getElementById("fourerror").innerHTML = "u got some excess max g4s bruh";
+    } else{
+	 document.getElementById("fourerror").innerHTML = "";
     }
     if(mthrees > 20){
 	 document.getElementById("threeerror").innerHTML = "u got some excess max g3s bruh";
+    } else{
+	 document.getElementById("threeerror").innerHTML = "";
     }
     if(mtwos > 60){
 	 document.getElementById("twoerror").innerHTML = "u got some excess max g2s bruh";
+    }  else{
+	 document.getElementById("twoerror").innerHTML = "";
     }
     document.getElementById("nmaxfours").innerHTML = "<b><i>maxed g4s needed:</b></i> " + mfoursneeded;
     document.getElementById("nmaxthrees").innerHTML = "<b><i>maxed g3s needed:</b></i> " + mthreesneeded;
