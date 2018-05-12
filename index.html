@@ -42,7 +42,7 @@ function myFunction() {
     var nmthrees = document.getElementById("nmthrees").value;
     var mtwos = document.getElementById("mtwos").value;
     var tfours = (+mfours + +nmfours);
-    var tthrees = mthrees + nmthrees;
+    var tthrees = (+mthrees + +nmthrees);
     
     var fivesneeded = 5 - fives;
     var mfoursneeded = fivesneeded - mfours;	
@@ -54,7 +54,7 @@ function myFunction() {
     if(mthreesneeded < 0){
 	    mthreesneeded = 0;
     }
-    var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees + (mthrees * 3);
+    var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees + (+mthrees * 3);
     if(mtwosneeded < 0){
 	    mtwosneeded = 0;
     }
