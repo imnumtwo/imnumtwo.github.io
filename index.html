@@ -3,88 +3,16 @@
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
-<center>
-<h1>welcome to da daruma calculator</h1>
-<font size="3" >how many m0re darumas do u need?</font><br>
-<img src="https://render.fineartamerica.com/images/rendered/medium/phone-case/iphone10/images-medium-5/daruma-iv-thedustyphoenix.jpg">
+<title>Login</title>
+<h1>Login</h1>
 </head>
 <body>
 	<div>
+	<form name="next" method="post" action="home.html">
 
-        <input type="text" id="fives" name="fives" placeholder="# of g5s"><br>		
-	<input type="text" id="mfours" name="mfours" placeholder="# of maxed g4s"><br>	
-        <input type="text" id="nmfours" name="nmfours" placeholder="# of nonmaxed g4s"><br>	
-	<input type="text" id="mthrees" name="mthrees" placeholder="# of maxed g3s"><br>
-        <input type="text" id="nmthrees" name="nmthrees" placeholder="# of nonmaxed g3s"><br>	
-	<input type="text" id="mtwos" name="mtwos" placeholder="# of maxed g2s"><br>	
-	<button type="button" onclick="myFunction()">gogo</button>
-		
-	<p id="fourerror"></p>
-	<p id="threeerror"></p>
-	<p id="twoerror"></p>	
-		
-	<p id="nmaxfours"></p>
-	<p id="nmaxthrees"></p>
-	<p id="nmaxtwos"></p>
-	<p id="coins"></p>
-
+		</p>
+	  <input type="submit" id="submitButton" name="submitButton" value="Submit">
 	</form>
     </div>
-</body></center>
-	
-<script>
-	
-function myFunction() {
-    var fives = document.getElementById("fives").value;
-    var mfours = document.getElementById("mfours").value;
-    var nmfours = document.getElementById("nmfours").value;
-    var mthrees = document.getElementById("mthrees").value;
-    var nmthrees = document.getElementById("nmthrees").value;
-    var mtwos = document.getElementById("mtwos").value;
-    var tfours = (+mfours + +nmfours);
-    var tthrees = (+mthrees + +nmthrees);
-    
-    var fivesneeded = 5 - fives;
-    var mfoursneeded = fivesneeded - mfours;	
-    if(mfoursneeded < 0){
-	mfoursneeded = 0;    
-    }
-    var foursneeded = fivesneeded * 4;
-    var mthreesneeded = foursneeded - mthrees - nmfours;  
-    if(mthreesneeded < 0){
-	    mthreesneeded = 0;
-    }
-    var mtwosneeded = mthreesneeded * 3 - mtwos - nmthrees + (+mthrees * 3);
-    if(mtwosneeded < 0){
-	    mtwosneeded = 0;
-    }
-    var coins = 2950 - (fives * 590) - (tfours * 110) - (tthrees * 20);
-    if(coins < 0){
-	    coins = 0;
-    }
-    if(nmfours > 20){
-	    mtwosneeded = 0;
-    }
-    if(mfours > 5){
-	 document.getElementById("fourerror").innerHTML = "u got some excess max g4s bruh";
-    } else{
-	 document.getElementById("fourerror").innerHTML = "";
-    }
-    if(mthrees > 20){
-	 document.getElementById("threeerror").innerHTML = "u got some excess max g3s bruh";
-    } else{
-	 document.getElementById("threeerror").innerHTML = "";
-    }
-    if(mtwos > 60){
-	 document.getElementById("twoerror").innerHTML = "u got some excess max g2s bruh";
-    }  else{
-	 document.getElementById("twoerror").innerHTML = "";
-    }
-    document.getElementById("nmaxfours").innerHTML = "<b><i>maxed g4s needed:</b></i> " + mfoursneeded;
-    document.getElementById("nmaxthrees").innerHTML = "<b><i>maxed g3s needed:</b></i> " + mthreesneeded;
-    document.getElementById("nmaxtwos").innerHTML = "<b><i>maxed g2s needed: </b></i>" + mtwosneeded;
-    document.getElementById("coins").innerHTML = "<b><i>gold needed:</b></i> " + coins + " grand";
-}
-</script>
-	
+</body>
 </html>
